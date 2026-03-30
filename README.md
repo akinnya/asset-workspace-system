@@ -120,9 +120,12 @@ asset-workspace-system/
 ├── docs/                 README 预览图与架构图
 ├── frontend/             Vue 3 Web 客户端
 ├── scripts/              本地准备脚本
+├── ASSETS_LICENSE.md     素材与外部资源说明
+├── CODE_OF_CONDUCT.md    社区行为准则
 ├── CONTRIBUTING.md       贡献说明
 ├── LICENSE               开源协议
-└── README.md             仓库入口文档
+├── README.md             仓库入口文档
+└── SECURITY.md           安全漏洞提交流程
 ```
 
 ## 快速开始
@@ -275,6 +278,13 @@ cd frontend && npm run build
 - 小团队的图片、视频、文档、模型协作管理
 - 需要一个带前后端完整结构的开源管理平台模板
 
+## 开源发布说明
+
+- 仓库默认面向本地开发环境，`backend/.env` 仅用于本地运行，不应提交到版本库。
+- 当前仓库已包含代码、文档截图、SVG 标识与前端静态素材。公开发布前，请先核对这些文件是否都具备可再分发授权，详细说明见 [ASSETS_LICENSE.md](./ASSETS_LICENSE.md)。
+- 部分功能或界面依赖外部资源与第三方服务，包括 Google Fonts、Transparent Textures 背景纹理、Bing 图片抓取链路，以及可选的阿里云 OSS / 邮件能力。若你的部署环境对外联、隐私或合规性有更严格要求，建议改为本地静态资源或在发布版本中关闭相关能力。
+- 社区行为边界见 [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md)，安全漏洞提交流程见 [SECURITY.md](./SECURITY.md)。
+
 ## 贡献
 
 欢迎围绕以下方向提交改进：
@@ -286,7 +296,9 @@ cd frontend && npm run build
 
 提交代码前建议先阅读：
 
+- [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md)
 - [CONTRIBUTING.md](./CONTRIBUTING.md)
+- [SECURITY.md](./SECURITY.md)
 
 ## 开源协议
 
