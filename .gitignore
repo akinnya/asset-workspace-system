@@ -1,0 +1,36 @@
+# ================================================
+# asset-workspace-system Git 忽略配置
+# ================================================
+
+# === IDE ===
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.DS_Store
+
+# === 编译输出 ===
+target/
+build/
+*.class
+*.jar
+*.war
+
+# === 后端敏感文件 ===
+backend/.env
+backend/.env.local
+backend/.env.production
+backend/src/main/resources/application-local.yml
+backend/data/
+
+# === 前端 ===
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+
+# === 日志和临时文件 ===
+*.log
+*.tmp
+*.temp
+logs/

@@ -1,0 +1,41 @@
+package com.xxr.lingtuthinktank.model.enums.workspace;
+
+import cn.hutool.core.util.ObjectUtil;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Getter;
+
+/**
+ * 空间级别枚举
+ */
+@Getter
+@JsonFormat(shape = JsonFormat.Shape.OBJECT)
+public enum SpaceLevelEnum {
+
+    COMMON("普通版", 0, 100, 100L * 1024 * 1024), // 100MB
+    PROFESSIONAL("专业版", 1, 1000, 1024L * 1024 * 1024), // 1GB
+    FLAGSHIP("旗舰版", 2, 10000, 10L * 1024 * 1024 * 1024); // 10GB
+
+    private final String text;
+    private final int value;
+    private final long maxCount;
+    private final long maxSize;
+
+    SpaceLevelEnum(String text, int value, long maxCount, long maxSize) {
+        this.text = text;
+        this.value = value;
+        this.maxCount = maxCount;
+        this.maxSize = maxSize;
+    }
+
+    public static SpaceLevelEnum getEnumByValue(Integer value) {
+        if (ObjectUtil.isEmpty(value)) {
+            return null;
+        }
+        for (SpaceLevelEnum spaceLevelEnum : SpaceLevelEnum.values()) {
+            if (spaceLevelEnum.value == value) {
+                return spaceLevelEnum;
+            }
+        }
+        return null;
+    }
+}

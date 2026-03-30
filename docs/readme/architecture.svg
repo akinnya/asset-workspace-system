@@ -1,0 +1,164 @@
+<svg width="1440" height="920" viewBox="0 0 1440 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="80" x2="1280" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFC"/>
+      <stop offset="0.5" stop-color="#EEF5F4"/>
+      <stop offset="1" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <linearGradient id="primary" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#14B8A6"/>
+      <stop offset="1" stop-color="#0F766E"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="shadow" x="-60" y="-60" width="1560" height="1040" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="20" flood-color="#0F172A" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto">
+      <path d="M0 0L14 7L0 14V0Z" fill="#0F766E"/>
+    </marker>
+  </defs>
+
+  <rect width="1440" height="920" rx="40" fill="url(#bg)"/>
+
+  <text x="92" y="102" fill="#0F172A" font-size="40" font-weight="800" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+    系统架构概览
+  </text>
+  <text x="92" y="144" fill="#475569" font-size="20" font-weight="500" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+    Web 客户端、Spring Boot 服务、数据层与外部能力以清晰分层方式组织
+  </text>
+
+  <g filter="url(#shadow)">
+    <rect x="90" y="210" width="300" height="188" rx="28" fill="url(#panel)"/>
+    <rect x="456" y="184" width="528" height="438" rx="32" fill="url(#panel)"/>
+    <rect x="1050" y="210" width="300" height="188" rx="28" fill="url(#panel)"/>
+    <rect x="1050" y="434" width="300" height="188" rx="28" fill="url(#panel)"/>
+    <rect x="1050" y="658" width="300" height="188" rx="28" fill="url(#panel)"/>
+    <rect x="456" y="684" width="528" height="162" rx="32" fill="url(#panel)"/>
+  </g>
+
+  <g>
+    <rect x="120" y="240" width="96" height="96" rx="24" fill="url(#primary)"/>
+    <rect x="144" y="264" width="48" height="20" rx="10" fill="#F8FAFC"/>
+    <rect x="144" y="296" width="22" height="26" rx="10" fill="#CCFBF1"/>
+    <rect x="170" y="296" width="22" height="26" rx="10" fill="#99F6E4"/>
+    <text x="238" y="280" fill="#0F172A" font-size="28" font-weight="800" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      Web 客户端
+    </text>
+    <text x="238" y="314" fill="#475569" font-size="18" font-weight="500" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      Vue 3 + Vite + TypeScript
+    </text>
+    <text x="120" y="368" fill="#64748B" font-size="16" font-weight="500" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      展览页、搜索页、上传页、工作区、个人中心、
+    </text>
+    <text x="120" y="392" fill="#64748B" font-size="16" font-weight="500" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      通知中心与管理员后台统一由前端工作区承载
+    </text>
+  </g>
+
+  <g>
+    <rect x="492" y="224" width="458" height="82" rx="24" fill="url(#primary)"/>
+    <text x="526" y="274" fill="#FFFFFF" font-size="30" font-weight="800" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      Spring Boot API 服务
+    </text>
+
+    <rect x="492" y="336" width="204" height="114" rx="22" fill="#F8FAFC"/>
+    <rect x="720" y="336" width="204" height="114" rx="22" fill="#F8FAFC"/>
+    <rect x="492" y="470" width="204" height="114" rx="22" fill="#F8FAFC"/>
+    <rect x="720" y="470" width="204" height="114" rx="22" fill="#F8FAFC"/>
+
+    <text x="520" y="378" fill="#0F172A" font-size="22" font-weight="800" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      认证与用户域
+    </text>
+    <text x="520" y="406" fill="#64748B" font-size="15" font-weight="500" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      JWT、登录、注册、资料、权限控制
+    </text>
+
+    <text x="748" y="378" fill="#0F172A" font-size="22" font-weight="800" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      资产与检索域
+    </text>
+    <text x="748" y="406" fill="#64748B" font-size="15" font-weight="500" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      上传、详情、附件、颜色搜索、以图搜图
+    </text>
+
+    <text x="520" y="512" fill="#0F172A" font-size="22" font-weight="800" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      协作与互动域
+    </text>
+    <text x="520" y="540" fill="#64748B" font-size="15" font-weight="500" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      工作区、邀请申请、评论、点赞、收藏、通知
+    </text>
+
+    <text x="748" y="512" fill="#0F172A" font-size="22" font-weight="800" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      管理与运维域
+    </text>
+    <text x="748" y="540" fill="#64748B" font-size="15" font-weight="500" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      数据分析、回收站、日志审计、邮件健康检查
+    </text>
+  </g>
+
+  <g>
+    <text x="1082" y="278" fill="#0F172A" font-size="28" font-weight="800" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      MySQL 8
+    </text>
+    <text x="1082" y="312" fill="#475569" font-size="18" font-weight="500" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      核心业务数据
+    </text>
+    <text x="1082" y="360" fill="#64748B" font-size="16" font-weight="500" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      用户、素材、工作区、通知、
+    </text>
+    <text x="1082" y="384" fill="#64748B" font-size="16" font-weight="500" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      评论、日志等关系型数据
+    </text>
+  </g>
+
+  <g>
+    <text x="1082" y="502" fill="#0F172A" font-size="28" font-weight="800" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      Redis
+    </text>
+    <text x="1082" y="536" fill="#475569" font-size="18" font-weight="500" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      缓存与会话辅助
+    </text>
+    <text x="1082" y="584" fill="#64748B" font-size="16" font-weight="500" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      登录态辅助、热点数据缓存、
+    </text>
+    <text x="1082" y="608" fill="#64748B" font-size="16" font-weight="500" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      并发访问场景下的服务支撑
+    </text>
+  </g>
+
+  <g>
+    <text x="1082" y="726" fill="#0F172A" font-size="28" font-weight="800" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      本地运行环境
+    </text>
+    <text x="1082" y="760" fill="#475569" font-size="18" font-weight="500" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      Local Files / MySQL / Redis
+    </text>
+    <text x="1082" y="808" fill="#64748B" font-size="16" font-weight="500" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      本地文件存储为默认方案，
+    </text>
+    <text x="1082" y="832" fill="#64748B" font-size="16" font-weight="500" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      面向本地文件目录、数据库与缓存的最小运行闭环
+    </text>
+  </g>
+
+  <g>
+    <text x="492" y="736" fill="#0F172A" font-size="24" font-weight="800" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      本地开发层
+    </text>
+    <text x="492" y="772" fill="#475569" font-size="17" font-weight="500" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      IDEA 运行后端、npm 启动前端、MySQL / Redis、Knife4j 接口文档
+    </text>
+    <text x="492" y="808" fill="#64748B" font-size="15" font-weight="500" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+      聚焦本地安装、接口调试与页面联调，不依赖额外脚本入口
+    </text>
+  </g>
+
+  <path d="M390 304H430C446 304 456 314 456 330V330" stroke="#0F766E" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M984 270H1016C1034 270 1050 286 1050 304V304" stroke="#0F766E" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M984 402H1016C1034 402 1050 386 1050 368V368" stroke="#0F766E" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M984 520H1016C1034 520 1050 530 1050 544V544" stroke="#0F766E" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M984 582H1016C1034 582 1050 602 1050 624V624" stroke="#0F766E" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M720 622V654C720 670 720 684 720 684" stroke="#0F766E" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+</svg>

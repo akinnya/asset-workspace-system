@@ -1,0 +1,53 @@
+server:
+  port: 8123
+  servlet:
+    context-path: /api
+spring:
+  application:
+    name: asset-workspace-system-backend
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:asset_workspace_system}?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&allowPublicKeyRetrieval=true
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:}
+  sql:
+    init:
+      schema-locations: classpath:sql/create_table.sql
+      mode: always
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  redis:
+    host: ${REDIS_HOST:localhost}
+    port: ${REDIS_PORT:6379}
+mybatis-plus:
+  configuration:
+    # 驼峰命名
+    map-underscore-to-camel-case: false
+    # 日志打印
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    # 逻辑删除
+    global-config:
+      db-config:
+        logic-delete-field-name: isDelete
+        logic-delete-value: 1
+        logic-not-delete-value: 0
+# 接口文档配置
+knife4j:
+  enable: true
+  openapi:
+    title: 接口文档
+    version: 1.0
+    group:
+      default:
+        api-rule: package
+        api-rule-resources:
+          - com.xxr.lingtuthinktank.controller
+file:
+  storage:
+    type: ${FILE_STORAGE_TYPE:local}
+local:
+  file:
+    storage:
+      path: ${LOCAL_FILE_STORAGE_PATH:./data/uploads}
