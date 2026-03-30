@@ -254,6 +254,16 @@ cd backend && mvn -q -DskipTests compile
 cd frontend && npm run build
 ```
 
+### 本地验证脚本
+
+```bash
+bash scripts/smoke.sh
+bash scripts/build_check.sh all
+```
+
+- `scripts/smoke.sh` 用于快速检查关键文件、工具链和脚本语法
+- `scripts/build_check.sh` 用于执行后端编译与前端构建验证
+
 ## 配置说明
 
 ### 文件存储
@@ -277,6 +287,10 @@ cd frontend && npm run build
 - 个人作品集素材归档
 - 小团队的图片、视频、文档、模型协作管理
 - 需要一个带前后端完整结构的开源管理平台模板
+
+## 二次开发文档
+
+- [docs/development/secondary-development-guide.md](./docs/development/secondary-development-guide.md)
 
 ## 开源发布说明
 
